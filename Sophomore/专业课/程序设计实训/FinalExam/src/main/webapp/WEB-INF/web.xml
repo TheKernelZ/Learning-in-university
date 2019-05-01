@@ -1,0 +1,95 @@
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+   
+  <servlet>
+  	<servlet-name>Login</servlet-name>
+  	<servlet-class>com.thekernel.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/doLogin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Register</servlet-name>
+  	<servlet-class>com.thekernel.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Register</servlet-name>
+  	<url-pattern>/doRegister</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>Show</servlet-name>
+  	<servlet-class>com.thekernel.servlet.ShowServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Show</servlet-name>
+  	<url-pattern>/doShow</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>Exit</servlet-name>
+  	<servlet-class>com.thekernel.servlet.ExitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Exit</servlet-name>
+  	<url-pattern>/doExit</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>UpdatePassword</servlet-name>
+  	<servlet-class>com.thekernel.servlet.UpdatePasswordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UpdatePassword</servlet-name>
+  	<url-pattern>/doUpdatePassword</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>AddGood</servlet-name>
+  	<servlet-class>com.thekernel.servlet.AddGoodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddGood</servlet-name>
+  	<url-pattern>/doAddGood</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>Search</servlet-name>
+  	<servlet-class>com.thekernel.servlet.SearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Search</servlet-name>
+  	<url-pattern>/doSearch</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>SearchResult</servlet-name>
+  	<servlet-class>com.thekernel.servlet.SearchResultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SearchResult</servlet-name>
+  	<url-pattern>/doSearchResult</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>Delete</servlet-name>
+  	<servlet-class>com.thekernel.servlet.DeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Delete</servlet-name>
+  	<url-pattern>/doDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UpdateGood</servlet-name>
+  	<servlet-class>com.thekernel.servlet.UpdateGoodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UpdateGood</servlet-name>
+  	<url-pattern>/doUpdateGood</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
+

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Good">
+
+  <!-- 添加商品 -->
+  <insert id="insert" parameterType="com.thekernel.entity.Good">
+  	INSERT INTO `good`(`id`, `name`, `price`, `type`) VALUES(#{id}, #{name}, #{price}, #{type})  
+  </insert>
+  
+  <!-- 删除商品 -->
+  <update id="deleteById" parameterType="int">
+  	UPDATE `good` SET `is_delete`=1 WHERE `id`=#{_parameter}
+  </update>
+  
+  <!-- 修改密码 -->
+  <update id="updateById" parameterType="com.thekernel.entity.Good">
+  	UPDATE `good` SET `name`=#{name}, `price`=#{price}, `type`=#{type} WHERE `id`=#{id} AND `is_delete`=0
+  </update>
+  
+  <!-- 查询限定量的商品 -->
+  <select id="selectGoodLimtByPage" parameterType="int" resultType="com.thekernel.entity.Good">
+  	SELECT * FROM `good` WHERE `is_delete`=0 LIMIT #{_parameter}
+  </select>
+  
+  <!-- 根据 ID 查询商品 -->
+  <select id="selectById" parameterType="int" resultType="com.thekernel.entity.Good">
+  	SELECT * FROM `good` WHERE `id`=#{_parameter} AND `is_delete`=0
+  </select>
+  
+  <!-- 查询所有商品名 -->
+  <select id="selectGoodnames" resultType="string">
+  	SELECT `name` FROM `good` WHERE `is_delete`=0
+  </select>
+  
+  <!-- 查询所有商品 id -->
+  <select id="selectGoodids" resultType="int">
+  	SELECT `id` FROM `good` WHERE `is_delete`=0
+  </select>
+  
+  <!-- 根据关键词查询商品 -->
+  <select id="selectByKeyword" parameterType="string" resultType="com.thekernel.entity.Good">
+  	SELECT * FROM `good` WHERE `is_delete`=0 AND (`id` LIKE #{_parameter} OR `name` LIKE #{_parameter} OR `price` LIKE #{_parameter} OR `type` LIKE #{_parameter})
+  </select>
+  
+  <!-- 查询所有商品 -->
+  <select id="selectAll" resultType="com.thekernel.entity.Good">
+  	SELECT * FROM `good` WHERE `is_delete`=0
+  </select>
+  
+  
+</mapper>
