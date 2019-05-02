@@ -36,12 +36,14 @@ public class ShowServlet extends HttpServlet{
 		IGoodDao dao = new GoodDaoImpl();
 		PrintWriter out = resp.getWriter();
 		resp.setCharacterEncoding("utf8");
+		int page = Integer.parseInt(req.getParameter("page"));
 		
-		List<Good> goods = dao.selectAll();
+		List<Good> goods = dao.selectGoodLimtByPage(page);
+		int size = dao.selectAll().size();
 		
 		result.put("code", 0);
 		result.put("msg", "ok");
-		result.put("count", goods.size());
+		result.put("count", size);
 		result.put("data", goods);
 		
 		out.print(result.toJSONString());

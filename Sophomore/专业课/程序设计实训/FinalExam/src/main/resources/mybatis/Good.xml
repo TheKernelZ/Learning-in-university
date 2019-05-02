@@ -22,7 +22,7 @@
   
   <!-- 查询限定量的商品 -->
   <select id="selectGoodLimtByPage" parameterType="int" resultType="com.thekernel.entity.Good">
-  	SELECT * FROM `good` WHERE `is_delete`=0 LIMIT #{_parameter}
+  	SELECT * FROM `good` WHERE `is_delete`=0 AND `id` > (#{_parameter}-1)*5 LIMIT 5
   </select>
   
   <!-- 根据 ID 查询商品 -->

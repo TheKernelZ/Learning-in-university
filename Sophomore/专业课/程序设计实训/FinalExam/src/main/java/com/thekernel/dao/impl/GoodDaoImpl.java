@@ -20,7 +20,7 @@ public class GoodDaoImpl implements IGoodDao {
 		SqlSessionFactory factory = MybatisUtils.createFactory();
 		SqlSession sqlSession = factory.openSession();
 
-		result = sqlSession.selectList("Good.selectGoodLimtByPage", page*5);		
+		result = sqlSession.selectList("Good.selectGoodLimtByPage", page);		
 		sqlSession.commit();
 
 		return result;
