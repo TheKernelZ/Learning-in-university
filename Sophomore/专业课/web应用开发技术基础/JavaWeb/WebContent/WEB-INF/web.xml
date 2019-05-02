@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>JavaWeb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>GoodActionServlet</servlet-name>
+  	<servlet-class>com.thekernel.servlet.GoodActionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GoodActionServlet</servlet-name>
+  	<url-pattern>/goodaction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>doSearch</servlet-name>
+  	<servlet-class>com.thekernel.servlet.DoSearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>doSearch</servlet-name>
+  	<url-pattern>/dosearch</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>doOrder</servlet-name>
+  	<servlet-class>com.thekernel.servlet.DoOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>doOrder</servlet-name>
+  	<url-pattern>/doorder</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cartDetailAction</servlet-name>
+  	<servlet-class>com.thekernel.servlet.DoCartDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cartDetailAction</servlet-name>
+  	<url-pattern>/cartdetailaction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>addGoodsAction</servlet-name>
+  	<servlet-class>com.thekernel.servlet.DoAddGoodsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>addGoodsAction</servlet-name>
+  	<url-pattern>/addgoodsaction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cartDelAction</servlet-name>
+  	<servlet-class>com.thekernel.servlet.DoCartDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cartDelAction</servlet-name>
+  	<url-pattern>/cartdelaction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cartAction</servlet-name>
+  	<servlet-class>com.thekernel.servlet.DoCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cartAction</servlet-name>
+  	<url-pattern>/cartaction</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+</web-app>
