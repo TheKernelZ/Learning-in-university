@@ -5,13 +5,6 @@ import java.util.List;
 import com.thekernel.entity.Good;
 
 public interface IGoodDao {
-
-	/**
-	 * Select Goods With Paging, Five Goods For a Page 
-	 * @param page
-	 * @return
-	 */
-	List<Good> selectGoodLimtByPage(int page);
 	
 	
 	/**

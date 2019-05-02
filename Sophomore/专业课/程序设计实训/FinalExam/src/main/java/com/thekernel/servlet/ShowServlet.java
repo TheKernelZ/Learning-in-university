@@ -37,8 +37,9 @@ public class ShowServlet extends HttpServlet{
 		PrintWriter out = resp.getWriter();
 		resp.setCharacterEncoding("utf8");
 		int page = Integer.parseInt(req.getParameter("page"));
+		page = (page - 1) * 5;
 		
-		List<Good> goods = dao.selectGoodLimtByPage(page);
+		List<Good> goods = dao.selectAll().subList(page, page+5);
 		int size = dao.selectAll().size();
 		
 		result.put("code", 0);

@@ -12,19 +12,6 @@ import com.thekernel.util.MybatisUtils;
 
 public class GoodDaoImpl implements IGoodDao {
 
-	@Override
-	public List<Good> selectGoodLimtByPage(int page) {
-		
-		List<Good> result = null;
-		
-		SqlSessionFactory factory = MybatisUtils.createFactory();
-		SqlSession sqlSession = factory.openSession();
-
-		result = sqlSession.selectList("Good.selectGoodLimtByPage", page);		
-		sqlSession.commit();
-
-		return result;
-	}
 
 	@Override
 	public Good selectById(int id) {

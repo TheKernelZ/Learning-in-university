@@ -15,15 +15,10 @@
   	UPDATE `good` SET `is_delete`=1 WHERE `id`=#{_parameter}
   </update>
   
-  <!-- 修改密码 -->
+  <!-- 修改商品 -->
   <update id="updateById" parameterType="com.thekernel.entity.Good">
   	UPDATE `good` SET `name`=#{name}, `price`=#{price}, `type`=#{type} WHERE `id`=#{id} AND `is_delete`=0
   </update>
-  
-  <!-- 查询限定量的商品 -->
-  <select id="selectGoodLimtByPage" parameterType="int" resultType="com.thekernel.entity.Good">
-  	SELECT * FROM `good` WHERE `is_delete`=0 AND `id` > (#{_parameter}-1)*5 LIMIT 5
-  </select>
   
   <!-- 根据 ID 查询商品 -->
   <select id="selectById" parameterType="int" resultType="com.thekernel.entity.Good">
