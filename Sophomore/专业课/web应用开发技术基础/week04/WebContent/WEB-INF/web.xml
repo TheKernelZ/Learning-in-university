@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>week04</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>Compute</servlet-name>
+    <servlet-class>com.thekernel.servlet.ComputeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Compute</servlet-name>
+    <url-pattern>/compute.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>WanShu</servlet-name>
+    <servlet-class>com.thekernel.servlet.WanShuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WanShu</servlet-name>
+    <url-pattern>/wanShu.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Compute3</servlet-name>
+    <servlet-class>com.thekernel.servlet.Compute3Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Compute3</servlet-name>
+    <url-pattern>/compute03.do</url-pattern>
+  </servlet-mapping>
+</web-app>
